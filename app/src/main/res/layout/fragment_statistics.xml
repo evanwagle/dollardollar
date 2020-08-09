@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- STATISTICS TITLE -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/statistics_title"
+            android:paddingLeft="16dp"
+            android:paddingTop="16dp"
+            android:layout_marginTop="12dp"
+            android:text="@string/statistics"
+            android:textColor="@color/blackGray"
+            android:textSize="34sp"
+            android:textStyle="bold">
+        </TextView>
+
+        <!-- PIE CHART -->
+        <com.github.mikephil.charting.charts.PieChart
+            android:id="@+id/pie_chart"
+            android:layout_width="match_parent"
+            android:layout_height="400sp"
+            android:layout_below="@id/statistics_title"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="1dp">
+        </com.github.mikephil.charting.charts.PieChart>
+
+        <!-- MONTH, DAY, ALL TIME STATISTICS -->
+        <!-- Totals -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@id/pie_chart">
+
+            <TextView
+                android:id="@+id/month_total"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                android:paddingLeft="16dp"
+                android:layout_marginTop="12dp"
+                android:text="Spent this month: ">
+            </TextView>
+            <TextView
+                android:id="@+id/today_total"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textSize="17sp"
+                android:textColor="@color/blackGray"
+                android:paddingLeft="16dp"
+                android:text="Today: ">
+            </TextView>
+            <TextView
+                android:id="@+id/alltime_total"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textSize="17sp"
+                android:textColor="@color/blackGray"
+                android:paddingLeft="16dp"
+                android:text="All time: ">
+            </TextView>
+        </LinearLayout>
+
+        <!-- Total Cost Holders -->
+        <LinearLayout
+            android:id="@+id/cost_statistics"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@id/pie_chart"
+            android:layout_alignParentRight="true"
+            android:paddingRight="16dp">
+
+            <TextView
+                android:id="@+id/month_total_holder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"
+                android:textColor="@android:color/black"
+                android:paddingLeft="16dp"
+                android:textStyle="bold"
+                android:text="$ 30"
+                android:layout_marginTop="12dp">
+            </TextView>
+            <TextView
+                android:id="@+id/today_total_holder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textSize="17sp"
+                android:textColor="@color/blackGray"
+                android:text="$ 30"
+                android:paddingLeft="16dp">
+            </TextView>
+            <TextView
+                android:id="@+id/all_total_holder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/blackGray"
+                android:textSize="17sp"
+                android:text="$ 30"
+                android:paddingLeft="16dp">
+            </TextView>
+        </LinearLayout>
+
+        <!-- CATEGORY COST BREAKDOWN -->
+        <LinearLayout
+            android:id="@+id/categories"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_below="@id/cost_statistics">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Category"
+                android:textColor="@color/blackGray"
+                android:textStyle="bold"
+                android:textSize="20dp">
+            </TextView>
+
+            <!-- Item 1 -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="24dp">
+
+                <ImageView
+                    android:id="@+id/image_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_baseline_fastfood_24">
+                </ImageView>
+                <TextView
+                    android:id="@+id/category_text_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:text="@string/category_item_1"
+                    android:layout_toRightOf="@id/image_1"
+                    android:textColor="@color/blackGray"
+                    android:textSize="17sp">
+                </TextView>
+                <TextView
+                    android:id="@+id/category_holder_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="$ 30"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="end"
+                    android:textColor="@color/blackGray"
+                    android:textSize="17sp">
+                </TextView>
+
+            </RelativeLayout>
+
+            <!-- Item 2 -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="24dp">
+                <ImageView
+                    android:id="@+id/image_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_baseline_emoji_people_24">
+                </ImageView>
+                <TextView
+                    android:id="@+id/category_text_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:text="@string/category_item_2"
+                    android:layout_toRightOf="@id/image_2"
+                    android:textColor="@color/blackGray"
+                    android:textSize="17sp">
+                </TextView>
+                <TextView
+                    android:id="@+id/category_holder_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="$ 30"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="end"
+                    android:textColor="@color/blackGray"
+                    android:textSize="17sp">
+                </TextView>
+
+            </RelativeLayout>
+
+            <!-- Item 3 -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="24dp">
+                <ImageView
+                    android:id="@+id/image_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_baseline_business_center_24">
+                </ImageView>
+                <TextView
+                    android:id="@+id/category_text_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:text="@string/category_item_3"
+                    android:layout_toRightOf="@id/image_3"
+                    android:textColor="@color/blackGray"
+                    android:textSize="17sp">
+                </TextView>
+                <TextView
+                    android:id="@+id/category_holder_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="$ 30"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="end"
+                    android:textColor="@color/blackGray"
+                    android:textSize="17sp">
+                </TextView>
+            </RelativeLayout>
+
+            <!-- Item 4 -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="24dp">
+                <ImageView
+                    android:id="@+id/image_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_baseline_ondemand_video_24">
+                </ImageView>
+                <TextView
+                    android:id="@+id/category_text_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:text="@string/category_item_4"
+                    android:layout_toRightOf="@id/image_4"
+                    android:textColor="@color/blackGray"
+                    android:textSize="17sp">
+                </TextView>
+                <TextView
+                    android:id="@+id/category_holder_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="$ 30"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="end"
+                    android:textColor="@color/blackGray"
+                    android:textSize="17sp">
+                </TextView>
+            </RelativeLayout>
+
+            <!-- Item 5 -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="24dp">
+                <ImageView
+                    android:id="@+id/image_5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_baseline_commute_24">
+                </ImageView>
+                <TextView
+                    android:id="@+id/category_text_5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:text="@string/category_item_5"
+                    android:layout_toRightOf="@id/image_5"
+                    android:textColor="@color/blackGray"
+                    android:textSize="17sp">
+                </TextView>
+                <TextView
+                    android:id="@+id/category_holder_5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="$ 30"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="end"
+                    android:textColor="@color/blackGray"
+                    android:textSize="17sp">
+                </TextView>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</ScrollView>

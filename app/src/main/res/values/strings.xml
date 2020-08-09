@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">DollarDollar</string>
+    <string name="home">Home</string>
+    <string name="statistics">Statistics</string>
+    <string name="recents">Recents</string>
+    <string name="fab_content_desc">Purchase</string>
+    <string name="cost_amount_filler">$ 0.00</string>
+    <string name="cost_desc_filler">Description</string>
+    <string name="button_save">Save</string>
+    <string name="button_add">Add</string>
+
+    <string name="category_item_1">Food</string>
+    <string name="category_item_2">Paid Friends/Family</string>
+    <string name="category_item_3">Personal Items</string>
+    <string name="category_item_4">Entertainment</string>
+    <string name="category_item_5">Transportation</string>
+
+    <string-array name="category_array">
+        <item>Food</item>
+        <item>Paid Friends/Family</item>
+        <item>Personal Items</item>
+        <item>Entertainment</item>
+        <item>Transportation</item>
+    </string-array>
+</resources>

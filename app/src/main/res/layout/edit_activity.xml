@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddPurchaseActivity"
+    android:padding="16dp"
+    android:paddingTop="24dp">
+
+    <ImageButton
+        android:id="@+id/button_clear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00FFFFFF"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="4dp"
+        android:src="@drawable/ic_baseline_clear_24" />
+
+    <Button
+        android:id="@+id/button_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="@string/button_save"
+        android:textAllCaps="false"
+        app:cornerRadius="6dp" />
+
+    <EditText
+        android:id="@+id/cost_amount_field"
+        android:layout_width="124dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_marginTop="16dp"
+        android:inputType="numberDecimal"
+        android:layout_below="@id/button_save"
+        android:textSize="17sp"
+        android:hint="@string/cost_amount_filler"/>
+
+    <Spinner
+        android:id="@+id/category_spinner_field"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cost_amount_field"
+        android:layout_marginTop="10dp">
+    </Spinner>
+
+    <EditText
+        android:id="@+id/cost_desc_field"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:layout_marginTop="10dp"
+        android:hint="@string/cost_desc_filler"
+        android:textSize="17sp"
+        android:layout_below="@id/category_spinner_field"/>
+
+</RelativeLayout>
