@@ -8,11 +8,13 @@ The Pie Chart used is created through [MPAndroidChart](https://github.com/PhilJa
 
 Icons used are from Google's [Material Design Icons](https://material.io/resources/icons/?style=baseline).
 
+Screenshots created with [App Mockup](https://app-mockup.com).
+
 ## Screenshots
-![Home](images/homeScreenShot.png)
-![Add](images/addScreenShot.png)
-![Graph](images/graphScreenShot.png)
-![Category](images/categoryScreenShot.png)
+
+![Screenshots1](images/mockup1.png)
+
+![Screenshots2](images/mockup2.png)
 
 ## How to Install
 
